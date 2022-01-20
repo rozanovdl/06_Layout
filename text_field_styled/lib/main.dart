@@ -19,16 +19,15 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key}) : super(key: key);
-
+  MyHomePage({Key? key}) : super(key: key);
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
   String value = "";
-  @override
   TextEditingController controller = TextEditingController();
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -64,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     labelStyle: TextStyle(
                         color: Colors.purple),
                     hintText: 'Введите значение',
-                    helperText: 'Поле для поиска заметок»',
+                    helperText: 'Поле для поиска заметок',
                     contentPadding: EdgeInsets.all(8),
                   ),
                 )),

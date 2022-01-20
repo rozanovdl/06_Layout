@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key}) : super(key: key);
+  MyHomePage({Key? key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -31,31 +31,21 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(body: SafeArea(child:
-            //      Expanded(child:
             LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         double _width = constraints.constrainWidth();
-        print(_width);
         return _width > 500
             ? ListView.builder(
                 itemBuilder: (context, index) => SizedBox(
-                  //width: 100,
                   height: 100.0,
                   child: Card(
                     margin: const EdgeInsets.all(10.0),
                     color: Colors.blue,
-
-                    //shape: RoundedRectangleBorder(
-                    //borderRadius: BorderRadius.circular(10),
-                    //),
                     child: Center(
                       child: Text('$index'),
                     ),
                   ),
                 ),
-                //     ListTile(
-                //   title: Text(listData[index].toString()),
-                // ),
                 itemCount: listData.length,
               )
             : SizedBox(
@@ -80,8 +70,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ));
       },
     )
-        //   )
-
         ));
   }
 }

@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key}) : super(key: key);
+  MyHomePage({Key? key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -34,6 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
         SliverAppBar(
           leading: IconButton(
             icon: Icon(Icons.view_headline, color: Colors.white),
+            onPressed: () {},
           ),
           expandedHeight: 300.0,
           floating: false,
